@@ -28,7 +28,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template:'template.ejs',
       appMountId: 'react-app-root',
-      title: 'React Template Environment',
+      title: 'Everlane clone',
       filename: resolve(__dirname, "build", "index.html"),
     })
   ],
@@ -40,7 +40,7 @@ module.exports = {
     contentBase: resolve(__dirname, 'build'),
     publicPath: '/'
   },
-  
+
   module: {
     rules: [
       {
@@ -53,7 +53,7 @@ module.exports = {
           configFile: "./.eslintrc.json"
           }
         },
-        
+
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
@@ -61,7 +61,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env', '@babel/preset-react'],
-            plugins: [ 'react-hot-loader/babel', 'styled-jsx/babel' ]
+            plugins: [ 'react-hot-loader/babel', 'styled-jsx/babel', '@babel/plugin-proposal-class-properties' ]
           }
         }
       }

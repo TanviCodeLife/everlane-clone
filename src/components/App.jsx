@@ -1,20 +1,23 @@
 import React from 'react';
+import Header from './Header';
 import { Switch, Route } from 'react-router-dom';
 
-function App() {
+// <Route exact path='/' component={ TicketList }/>
+
+function App(){
   return (
     <div>
-      <h1>Hello, world</h1>
+      <style jsx global>{`
+        body {
+          font-family: Helvetica;
+        }
 
+      `}</style>
+      <Header/>
       <Switch>
-        <Route exact path='/' component={ ( ()=>{'Routing works!';} )() } /> 
+
       </Switch>
 
-      <style jsx global>{`
-          body{
-            font-family: sans-serif;
-          }
-        `}</style>
     </div>
   );
 }
