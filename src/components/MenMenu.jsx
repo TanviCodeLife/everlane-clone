@@ -54,7 +54,9 @@ class MenMenu extends React.Component {
         >
 
         {mensList.map((item, key) =>
-          <MenuItem onClick={this.handleClose}><MenDropdown heading={item} key={key}/></MenuItem>
+          <MenuItem onClick={this.handleClose} key={key}>
+            <MenDropdown heading={item} key={key}/>
+          </MenuItem>
         )}
         </Menu>
       </div>

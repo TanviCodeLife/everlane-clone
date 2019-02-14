@@ -64,7 +64,9 @@ class WomenMenu extends React.Component {
         >
 
         {womensList.map((item, key) =>
-          <MenuItem onClick={this.handleClose}><WomenDropdown heading={item} key={key}/></MenuItem>
+          <MenuItem onClick={this.handleClose} key={key}>
+            <WomenDropdown heading={item} key={key}/>
+          </MenuItem>
         )}
         </Menu>
       </div>
